@@ -1,5 +1,5 @@
-DROP table if exists videogame_sales;
-CREATE table videogame_sales
+DROP table if exists public.videogame_sales;
+CREATE table public.videogame_sales
 (
 rank int
 ,name varchar
@@ -16,4 +16,4 @@ rank int
 ;
 
 -- change localpath to the location of the saved file
-COPY videogame_sales FROM 'localpath/videogame_sales.csv' DELIMITER ',' CSV HEADER;
+COPY public.videogame_sales FROM 'C:\Users\Dmitri\Documents\GitRep\sql_book\Chapter 8_ Creating Complex Data Sets\videogame_sales.csv' DELIMITER ',' CSV HEADER;

@@ -1,5 +1,5 @@
-DROP table if exists game_users;
-CREATE table game_users
+DROP table if exists public.game_users;
+CREATE table public.game_users
 (
 user_id int
 ,created date
@@ -7,10 +7,10 @@ user_id int
 )
 ;
 
-COPY game_actions FROM '/localpath/game_users.csv' DELIMITER ',' CSV HEADER;
+COPY public.game_users FROM 'C:\Users\Dmitri\Documents\GitRep\sql_book\Chapter 7_ Experiment Analysis\game_users.csv' DELIMITER ',' CSV HEADER;
 
-DROP table if exists game_actions;
-CREATE table game_actions
+DROP table if exists public.game_actions;
+CREATE table public.game_actions
 (
 user_id int
 ,action varchar
@@ -18,10 +18,10 @@ user_id int
 ) 
 ;
 
-COPY game_actions FROM '/localpath/game_actions.csv' DELIMITER ',' CSV HEADER;
+COPY public.game_actions FROM 'C:\Users\Dmitri\Documents\GitRep\sql_book\Chapter 7_ Experiment Analysis\game_actions.csv' DELIMITER ',' CSV HEADER;
 
-DROP table if exists game_purchases;
-CREATE table game_purchases
+DROP table if exists public.game_purchases;
+CREATE table public.game_purchases
 (
 user_id int
 ,purch_date date
@@ -29,10 +29,10 @@ user_id int
 )
 ;
 
-COPY game_actions FROM '/localpath/game_purchases.csv' DELIMITER ',' CSV HEADER;
+COPY public.game_purchases FROM 'C:\Users\Dmitri\Documents\GitRep\sql_book\Chapter 7_ Experiment Analysis\game_purchases.csv' DELIMITER ',' CSV HEADER;
 
-DROP table if exists exp_assignment;
-CREATE table exp_assignment
+DROP table if exists public.exp_assignment;
+CREATE table public.exp_assignment
 (
 exp_name varchar
 ,user_id int
@@ -41,5 +41,5 @@ exp_name varchar
 )
 ;
 
-COPY game_actions FROM '/localpath/exp_assignment.csv' DELIMITER ',' CSV HEADER;
+COPY public.exp_assignment FROM 'C:\Users\Dmitri\Documents\GitRep\sql_book\Chapter 7_ Experiment Analysis\exp_assignment.csv' DELIMITER ',' CSV HEADER;
 
